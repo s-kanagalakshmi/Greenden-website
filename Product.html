@@ -13,8 +13,8 @@
     <!-- Navbar -->
     <nav class="bg-green-100 p-3 flex items-center justify-between shadow-xl sticky top-0 z-10">
         <h1 class="text-2xl">GREENDEN</h1>
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-            class="size-6 md:hidden">
+        <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            class="size-6 md:hidden cursor-pointer">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
         </svg>
 
@@ -24,12 +24,23 @@
             <li><a href="./ContactUs.html">Contact Us</a></li>
         </ul>
     </nav>
+   <!-- Side Navbar -->
+   <section id="sideNavbar" class="bg-green-100 fixed z-20 top-0"  style="width:50%;height:100vh;right:-50%;">
+    <div class="text-right p-5">
+        <p id="close-nav" class="cursor-pointer">X</p>
+    </div>
+    <ul class="flex flex-col items-center gap-10 text-gray-600 hover:underline">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="./Product.html">Products</a></li>
+        <li><a href="./ContactUs.html">Contact Us</a></li>
+    </ul>
+</section>
     <!-- Product Section -->
     <section class=" text-center mt-7">
         <h1 class="text-3xl font-bold">Our Products</h1>
-        <input type="text" class="border border-black p-2 m-3" style="width: 80%;"
+        <input type="text"  id="searchId" class="border border-black p-2 m-3" style="width: 80%;"
             placeholder="Search For a Product"><br>
-        <div class="grid grid-cols-2 md:grid-cols-4 mt-5 gap-5 ">
+        <div id="containerId" class="grid grid-cols-2 md:grid-cols-4 mt-5 gap-5 ">
             <div>
                 <img src="./Assets/1.png" alt="" class="inline hover:shadow-xl transform hover:translate-y-1">
                 <h1>Hibiscus Plant</h1>
@@ -79,6 +90,7 @@
         <p>@2025 Greenday.com</p>
 
     </section>
+    <script src="product.js"></script>
 </body>
 
 </html>
